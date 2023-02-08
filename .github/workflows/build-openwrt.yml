@@ -67,7 +67,7 @@ jobs:
 
     - name: Specify Commit ID to Build
       if: (github.event.inputs.commit != '')
-      run: cd openwrt && git reset --hard $github.event.inputs.commit
+      run: cd openwrt && git reset --hard ${{ github.event.inputs.commit }}
 
     - name: Load custom feeds
       run: |
